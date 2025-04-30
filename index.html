@@ -1,11 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FoodRush — Доставка готовой еды</title>
+    <!-- Bootstrap + Иконки -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Кастомные стили -->
+    <link rel="stylesheet" href="/style/styles.css">
 </head>
 <body>
+    <!-- Навбар -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-orange" href="#">
+                <i class="bi bi-lightning-charge-fill"></i> FoodRush
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#menu">Меню</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Преимущества</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Отзывы</a></li>
+                    <li class="nav-item ms-2"><a class="btn btn-orange" href="#order">Заказать</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой-блок с фоновым изображением -->
+    <section class="hero bg-dark text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80'); background-size: cover; background-position: center;">
+        <div class="container py-5 mt-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">Доставка еды за 30 минут</h1>
+                    <p class="lead mb-4 animate__animated animate__fadeInUp">Попробуйте наши хиты: бургеры, пицца, суши и здоровое питание!</p>
+                    <a href="#menu" class="btn btn-orange btn-lg px-4 animate__animated animate__pulse animate__infinite">Смотреть меню</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container py-4">
+            <h2 class="text-center mb-5 fw-bold">Почему FoodRush?</h2>
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100 animate__animated animate__fadeIn">
+                        <i class="bi bi-stopwatch text-orange fs-1 mb-3"></i>
+                        <h3>Быстро</h3>
+                        <p class="text-muted">Привезём за 30 минут или вернём 20% от заказа</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100 animate__animated animate__fadeIn animate__delay-1s">
+                        <i class="bi bi-egg-fried text-orange fs-1 mb-3"></i>
+                        <h3>Свежее</h3>
+                        <p class="text-muted">Готовим только из фермерских продуктов</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100 animate__animated animate__fadeIn animate__delay-2s">
+                        <i class="bi bi-truck text-orange fs-1 mb-3"></i>
+                        <h3>Бесплатно</h3>
+                        <p class="text-muted">Доставка от 1000 ₽ — бесплатно</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Меню -->
+    <section id="menu" class="py-5">
+        <div class="container py-5">
+            <h1 class="text-center mb-5">Меню FoodRush</h1>
+            
+            <div class="row g-4" id="menuContainer">
+                <!-- Исходные 4 товара -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm menu-item">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=999&q=80" class="card-img-top" alt="Бургер">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Бургер «FoodRush»</h5>
+                            <p class="text-muted">Говядина, сыр, салат, соус</p>
+                            <p class="text-orange fw-bold fs-4">390 ₽</p>
+                            <button class="btn btn-orange">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm menu-item">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=981&q=80" class="card-img-top" alt="Пицца">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Пицца «Маргарита»</h5>
+                            <p class="text-muted">Томаты, моцарелла, базилик</p>
+                            <p class="text-orange fw-bold fs-4">550 ₽</p>
+                            <button class="btn btn-orange">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm menu-item">
+                        <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" class="card-img-top" alt="Салат">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Салат «Цезарь»</h5>
+                            <p class="text-muted">Курица, салат, пармезан, соус</p>
+                            <p class="text-orange fw-bold fs-4">320 ₽</p>
+                            <button class="btn btn-orange">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm menu-item">
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" class="card-img-top" alt="Суши">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Роллы «Филадельфия»</h5>
+                            <p class="text-muted">Лосось, сливочный сыр, огурец</p>
+                            <p class="text-orange fw-bold fs-4">450 ₽</p>
+                            <button class="btn btn-orange">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <button id="loadMore" class="btn btn-outline-orange btn-lg">Посмотреть всё меню</button>
+            </div>
+        </div>
     
+        <script>
+            document.getElementById('loadMore').addEventListener('click', function() {
+                const menuContainer = document.getElementById('menuContainer');
+                const newItems = [
+                    {
+                        name: "Паста «Карбонара»",
+                        desc: "Спагетти, бекон, сливки, яйцо",
+                        price: 420,
+                        img: "https://images.unsplash.com/photo-1611270629569-8b357cb88da9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+                    },
+                    {
+                        name: "Стейк из лосося",
+                        desc: "Лосось, лимон, зелень",
+                        price: 680,
+                        img: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    },
+                    {
+                        name: "Лазанья «Болоньезе»",
+                        desc: "Мясной фарш, сыр, томатный соус",
+                        price: 490,
+                        img: "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1635&q=80"
+                    },
+                    {
+                        name: "Суп «Том Ям»",
+                        desc: "Креветки, грибы, кокосовое молоко",
+                        price: 380,
+                        img: "https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                    },
+                    {
+                        name: "Вок с курицей",
+                        desc: "Курица, овощи, лапша, соус",
+                        price: 370,
+                        img: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                    },
+                    {
+                        name: "Шашлык из свинины",
+                        desc: "Свиная шея, лук, зелень",
+                        price: 450,
+                        img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
+                    },
+                    {
+                        name: "Фондю сырное",
+                        desc: "Смесь сыров, белое вино, чеснок",
+                        price: 620,
+                        img: "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
+                    },
+                    {
+                        name: "Тирамису",
+                        desc: "Десерт с кофе и сыром маскарпоне",
+                        price: 290,
+                        img: "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
+                    }
+                ];
+    
+                newItems.forEach(item => {
+                    const col = document.createElement('div');
+                    col.className = 'col-md-6 col-lg-3';
+                    col.innerHTML = `
+                        <div class="card h-100 border-0 shadow-sm menu-item">
+                            <img src="${item.img}" class="card-img-top" alt="${item.name}">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">${item.name}</h5>
+                                <p class="text-muted">${item.desc}</p>
+                                <p class="text-orange fw-bold fs-4">${item.price} ₽</p>
+                                <button class="btn btn-orange">В корзину</button>
+                            </div>
+                        </div>
+                    `;
+                    menuContainer.appendChild(col);
+                });
+    
+                // Скрываем кнопку после загрузки
+                this.style.display = 'none';
+            });
+        </script>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="py-5 bg-light">
+        <div class="container py-4">
+            <h2 class="text-center mb-5 fw-bold">Отзывы клиентов</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" class="rounded-circle me-3" width="60" alt="Анна">
+                            <div>
+                                <h5 class="mb-0">Анна</h5>
+                                <div class="text-orange">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Бургер просто огонь! Заказываю каждый четверг. Доставили за 25 минут!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="60" alt="Иван">
+                            <div>
+                                <h5 class="mb-0">Иван</h5>
+                                <div class="text-orange">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Пицца как в Италии. Тесто тонкое, начинки много. Курьер вежливый."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded-3 shadow-sm h-100">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" class="rounded-circle me-3" width="60" alt="Елена">
+                            <div>
+                                <h5 class="mb-0">Елена</h5>
+                                <div class="text-orange">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p>"Цезарь — мой любимый салат. Порции большие, всегда свежие ингредиенты."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма заказа -->
+    <section id="order" class="py-5">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=958&q=80" class="img-fluid rounded-3 shadow" alt="Доставка">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Оформите заказ</h2>
+                    <form class="bg-light p-4 rounded-3 shadow-sm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control form-control-lg" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control form-control-lg" placeholder="Телефон" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control form-control-lg" placeholder="Адрес и комментарий" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-orange btn-lg w-100">Заказать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container py-4">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h3 class="fw-bold text-orange mb-3">
+                        <i class="bi bi-lightning-charge-fill"></i> FoodRush
+                    </h3>
+                    <p>Доставка еды с любовью ❤️</p>
+                    <div class="mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-telegram fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-whatsapp fs-4"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h5 fw-bold mb-3">Контакты</h3>
+                    <p><i class="bi bi-telephone me-2"></i> +7 (123) 456-78-90</p>
+                    <p><i class="bi bi-geo-alt me-2"></i> Москва, ул. Пушкина, 10</p>
+                    <p><i class="bi bi-clock me-2"></i> Ежедневно с 10:00 до 23:00</p>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="h5 fw-bold mb-3">Подписка на акции</h3>
+                    <form class="mb-3">
+                        <input type="email" class="form-control mb-2" placeholder="Ваш email">
+                        <button type="submit" class="btn btn-orange w-100">Подписаться</button>
+                    </form>
+                    <small>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</small>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <small>© 2023 FoodRush. Все права защищены.</small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS + Анимации -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </body>
 </html>
